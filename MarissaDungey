@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio homepage for Your Name — Information Systems student and aspiring data/AI professional." />
+  <style>
+    :root {
+      --accent: #0b5fff;
+      --muted: #666;
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --radius: 10px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #111;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 24px;
+    }
+    header {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .title {
+      margin: 0;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .title p {
+      margin: 2px 0 0 0;
+      color: var(--muted);
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px;
+    }
+    @media (max-width:900px){
+      main { grid-template-columns: 1fr; }
+    }
+    section.card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(12,18,30,0.06);
+    }
+    h2 { margin-top: 0; color: #0b2138; }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skills li {
+      background: #eef4ff;
+      color: #083a9a;
+      padding:6px 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      text-align: left;
+      padding:8px 6px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .meta {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .resume-link {
+      display:inline-block;
+      margin-top:8px;
+      background: var(--accent);
+      color: white;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:6px;
+    }
+    footer {
+      margin-top:20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+    .contact a { color:var(--accent); text-decoration:none; }
+    /* small helper */
+    .note { font-size:0.9rem; color:var(--muted); margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title">
+        <!-- Replace "Your Name" and title below -->
+        <h1>Your Name</h1>
+        <p>Information Systems Student<br/>University of Utah</p>
+      </div>
+      <div class="meta" aria-hidden="true">Portfolio</div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card about" id="about">
+          <h2>About Me</h2>
+          <!-- 100-150 word paragraph describing major, career interests, AI interests, technical interests -->
+          <p>
+            I am an Information Systems major with a strong interest in bridging technical solutions and business needs. I am pursuing a career in data analytics and web development, focusing on transforming data into actionable insights and building user-focused applications. My AI interests include using machine learning and prompt-driven AI tools to automate analysis, support decision-making, and improve workflows. Technically, I enjoy working with JavaScript, Python, SQL, and data visualization libraries, and I am actively learning best practices for model evaluation, explainability, and reliable data pipelines. I’m motivated to apply AI responsibly to real problems while continuing to strengthen my engineering and design skills.
+          </p>
+        </section>
+
+        <section class="card skills" id="skills" style="margin-top:16px;">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Data Visualization</li>
+            <li>AI Prompt Engineering</li>
+            <li>Microsoft Excel</li>
+          </ul>
+        </section>
+
+        <section class="card projects" id="projects" style="margin-top:16px;">
+          <h2>Projects</h2>
+          <table>
+            <thead>
+              <tr><th>Project</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>AI Business Analysis</td><td>Analyze business data and generate insights using ChatGPT-assisted prompts and Python data processing.</td></tr>
+              <tr><td>Data Visualization</td><td>Interactive dashboard prototype built with Tableau / D3 to surface key KPIs and trends.</td></tr>
+              <tr><td>Web Development</td><td>Responsive website using HTML/CSS/Bootstrap and JavaScript to showcase portfolio pieces.</td></tr>
+              <tr><td>Process Improvement</td><td>AI-assisted workflow redesign to automate routine reporting and reduce manual effort.</td></tr>
+            </tbody>
+          </table>
+          <p class="note">These are placeholders — update titles and descriptions as you complete projects.</p>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card resume" id="resume">
+          <h2>Resume</h2>
+          <!-- If you have a PDF, place it in the same folder and update the href. -->
+          <p class="meta">Downloadable resume (PDF)</p>
+          <a class="resume-link" href="resume.pdf" download>Download Resume (PDF)</a>
+          <p class="note">If you don't have a PDF yet, replace the anchor above with plain text: "Resume coming soon".</p>
+        </section>
+
+        <section class="card contact" id="contact" style="margin-top:16px;">
+          <h2>Contact</h2>
+          <p class="meta">University Email</p>
+          <p><a href="mailto:yourname@utah.edu">yourname@utah.edu</a></p>
+
+          <p class="meta" style="margin-top:8px;">LinkedIn</p>
+          <p><a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a></p>
+
+          <p class="meta" style="margin-top:8px;">GitHub</p>
+          <p><a href="https://github.com/your-github" target="_blank" rel="noopener">github.com/your-github</a></p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Made by Your Name — replace placeholders with your real details.</p>
+    </footer>
+  </div>
+</body>
+</html>
